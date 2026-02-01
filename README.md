@@ -188,7 +188,7 @@ TxShield/
 
 ## 🛠️ Configuration
 
-## Environment Variables
+### Environment Variables
 
 Create a `.env` file in your project root with the following credentials:
 
@@ -214,11 +214,11 @@ HTTP_PROXY=http://your-proxy:port               # HTTP proxy settings
 HTTPS_PROXY=http://your-proxy:port              # HTTPS proxy settings
 ```
 
-## Configuration Structure
+### Configuration Structure
 
 The system uses a hierarchical configuration managed by `ConfigManager`:
 
-### 1. Storage Configuration
+#### 1. Storage Configuration
 ```python
 storage = StorageConfig(
     json_dir="contract_data_output",      # Directory for transaction JSON files
@@ -228,7 +228,7 @@ storage = StorageConfig(
 )
 ```
 
-### 2. Model Configuration
+#### 2. Model Configuration
 
 The system supports multiple AI model providers with configurable settings:
 
@@ -248,22 +248,22 @@ models = {
 }
 ```
 
-### 3. Embedding Configuration
+#### 3. Embedding Configuration
 ```python
 embedding_model = "embedding-model-name"    # Embedding model identifier
 embedding_api_key = "your_embedding_key"    # Embedding service API key
 embedding_url = "url_to_embedding_service"  # Embedding service endpoint
 ```
 
-## Deployment Options
+### Deployment Options
 
-### Cloud-Based Deployment (Recommended for Experiments)
+#### Cloud-Based Deployment (Recommended for Experiments)
 - **Advantages**: No local GPU requirements, quick setup
 - **Models**: Baidu ERNIE, DeepSeek, Gitee AI
 - **Requirements**: Valid API keys for selected providers
 - **Best for**: Proof-of-concept, testing, resource-constrained environments
 
-### Local Deployment (Recommended for Production)
+#### Local Deployment (Recommended for Production)
 - **Advantages**: Full control, reduced latency, enhanced privacy
 - **Requirements**: 
   - Local GPU with sufficient VRAM (≥ 8GB recommended)
@@ -275,14 +275,14 @@ embedding_url = "url_to_embedding_service"  # Embedding service endpoint
   LOCAL_ENABLED=true
   ```
 
-### Hybrid Deployment
+#### Hybrid Deployment
 - Use cloud APIs for embedding services
 - Use local models for inference
 - Balance between cost, performance, and privacy
 
-## Usage Examples
+### Usage Examples
 
-### 1. Basic Configuration
+#### 1. Basic Configuration
 ```python
 from config import CONFIG
 
@@ -292,7 +292,7 @@ models = CONFIG.get_enabled_models()
 storage_path = CONFIG.storage.vector_dir
 ```
 
-### 2. Model Selection
+#### 2. Model Selection
 ```python
 class ContractAnalyzer:
     def _initialize_components(self):
