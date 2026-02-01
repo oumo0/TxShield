@@ -7,7 +7,7 @@
   ·
   <a href="#-quick-start">Quick Start</a>
   ·
-  <a href="#-features">Features</a>
+  <a href="#-structure">Structure</a>
   ·
   <a href="#-paper">Paper</a>
 </p>
@@ -84,7 +84,7 @@ While traditional tools rely on rigid rules, TxShield learns from historical att
 | Cryptographic Exploits               | <50%           | 🔴 Fundamental |
 
 
-## 🚀 Quick Start
+## 🚀 Quick Start <a id="-quick-start"></a>
 
 ### Installation
 
@@ -139,7 +139,7 @@ The system's design embodies the **separation of *interface simplicity* from *im
 - Performs adaptive reasoning based on match quality
 - Produces structured, explainable decisions
 
-## 📁 Project Structure
+## 📁 Project Structure <a id="-structure"></a>
 
 ```
 TxShield/
@@ -334,7 +334,7 @@ TxShield is released under the **MIT License**. See [LICENSE](LICENSE) for detai
 
 > **Note**: This is research software. Use in production at your own risk. Always conduct security audits.
 
-## 📄 Paper
+## 📄 Paper <a id="-paper"></a>
 
 Submitted to **ISSTA 2026**. Citation details will be available upon publication.
 
