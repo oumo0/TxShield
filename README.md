@@ -151,8 +151,8 @@ TxShield/
 │   │   └── visualizer.py          
 │   ├── api/                       
 │   │   ├── __init__.py
-│   │   └── analyzer_api.py        # FastAPI implementation
-│   ├── config/                    management
+│   │   └── analyzer_api.py        
+│   ├── config/                   
 │   │   ├── __init__.py
 │   │   └── settings.py           
 │   ├── core/                      
@@ -268,7 +268,7 @@ embedding_url = "url_to_embedding_service"  # Embedding service endpoint
 - **Requirements**: 
   - Local GPU with sufficient VRAM (≥ 8GB recommended)
   - Model serving infrastructure (Ollama, vLLM, etc.)
-  - `LOCAL_ENABLED=true` in `.env`
+  - Set `LOCAL_ENABLED=true` in your `.env` file
 - **Configuration**: 
   ```bash
   LOCAL_API_URL=http://localhost:8000
