@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "txshield"
+version = "0.1.0"
+description = "Modular DeFi transaction preprocessing and XGBoost attack detection"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.24",
+  "scikit-learn>=1.3",
+  "xgboost>=2.0",
+  "matplotlib>=3.7",
+  "PyYAML>=6.0"
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4", "ruff>=0.4"]
+ollama = ["langchain-ollama>=0.1,<0.4"]
+local-llm = ["transformers>=4.44", "torch>=2.2", "accelerate>=0.33"]
+api = ["fastapi>=0.110", "uvicorn>=0.27"]
+rag = ["pandas>=2.0", "chardet>=5.0", "requests>=2.31", "python-dotenv>=1.0", "tqdm>=4.66", "sentence-transformers>=2.7", "langchain>=0.2,<0.4", "langchain-core>=0.2,<0.4", "langchain-chroma>=0.1,<0.3", "chromadb>=0.5", "langchain-openai>=0.1,<0.4"]
+
+[project.scripts]
+txshield = "txshield.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,10 @@
+paths:
+  input: data/raw
+  output: data/processed
+target_function: executeOperation
+max_depth: 12
+remove_static_metadata: true
+shorten_args: true
+max_arg_length: 200
+address_alias: true
+remove_duplicate_marked: true
